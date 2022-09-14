@@ -1,0 +1,59 @@
+body {
+    background-color: aliceblue;
+}
+#index-header {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: 2rem;
+}
+
+#main-content {
+    width: 600px;
+    height: 100%;
+    text-align: center;
+    margin-left: calc(100% - 69.5%);
+    margin-top: 15%;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+#section-header {
+    font-size: 1.8rem;
+    margin: 15%;
+}
+
+#button-to-cartoon {
+    width: 200px;
+    heightl: 100px;
+    padding: 10px;
+    border: 2px solid azure;
+    background-color: #a8eac6;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+#myCanvas {
+    background-color: antiquewhite;
+    border: 3px solid black;
+    margin-left: calc(100% - 77%);
+}
+
+#cartoon-header {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: 1.8rem;
+}
+
+#cartoon-footer {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: 1.5rem;
+}
