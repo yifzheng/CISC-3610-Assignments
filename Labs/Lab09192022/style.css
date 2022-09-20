@@ -2,13 +2,16 @@ body {
     background-color: aliceblue;
 }
 
-#myCanvas {
-    background-color: antiquewhite;
-    border: 3px solid black;
-    margin-left: calc(100% - 77%);
+#chartArea {
+    margin-left: calc(100% - 76%);
+    margin-top: 1%;
 }
 
-#cartoon-header {
+#myCanvas {
+    border: 2px solid black;
+}
+
+#chart-header {
     margin-top: 10px;
     margin-bottom: 20px;
     text-align: center;
@@ -17,7 +20,7 @@ body {
     font-size: 1.8rem;
 }
 
-#cartoon-footer {
+#chart-footer {
     margin-top: 10px;
     text-align: center;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
