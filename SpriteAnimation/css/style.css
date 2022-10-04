@@ -1,0 +1,28 @@
+body {
+    background-color: aliceblue;
+}
+
+#animationArea {
+    border: 2px solid black;
+    margin-left: calc(100% - 76%);
+    margin-top: .5%;
+    background-image: url("../images/landscape.jpg");
+    background-size: cover;
+}
+
+#animation-header {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: 1.8rem;
+}
+
+#animation-footer {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: 1.5rem;
+}
