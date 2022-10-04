@@ -1,49 +1,175 @@
-"use strict";
+/* "use strict";
 
-// image width: 867, height: 798;
+// width and height for canvas
+const canvasWidth = 800;
+const canvasHeight = 600;
+
+// width and height of the sprite sheet
+const spriteWidth = 864;
+const spriteHeight = 280;
+
+// rows and columns in sprite sheet
+const rows = 2;
+const cols = 8;
+
+// width and height of single sprite
+const width = spriteWidth / cols;
+const height = spriteHeight / rows;
+
+// index of current frame
+let currFrame = 0;
+
+// totol frame count
+const frameCount = 8;
+
+// x and y coordinates to draw sprite
+let x = 100;
+let y = 400;
+
+// x and y coordinates in sprite sheet
+let srcX = 0;
+let srcY = 0;
+
 // canvas object
 let animation = {
     canvas: undefined,
-    canvasContext: undefined,
+    ctx: undefined,
     sprite: undefined,
 };
 
-const imgWidth = 289;
-const imgHeight = 266;
-const sw = 175;
-const sh = 175;
-
-// start function to store object properties and call main loop
 animation.start = () => {
     animation.canvas = document.getElementById("animationArea");
-    animation.canvas.width = 800;
-    animation.canvas.height = 600;
-    animation.canvasContext = animation.canvas.getContext("2d");
+    animation.canvas.width = canvasWidth;
+    animation.canvas.height = canvasHeight;
+    animation.ctx = animation.canvas.getContext("2d");
 
-    animation.mainLoop();
+    animation.sprite = new Image();
+    animation.sprite.src = "../images/character.png";
+
+    animation.sprite.onload = () => {
+        window.requestAnimationFrame(animation.mainLoop);
+    };
 };
 
 document.addEventListener("DOMContentLoaded", animation.start);
 
-animation.mainLoop = () => {
-    console.log("Starting Loop");
-    let ctx = animation.canvasContext;
+animation.mainLoop = (timestamp) => {
+    console.log("In Main Loop");
+    animation.draw();
 
-    // context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);
-
-    animation.sprite = new Image();
-    animation.sprite.onload = () => {
-        ctx.drawImage(
-            animation.sprite,
-            300,
-            0,
-            imgWidth,
-            imgHeight,
-            100,
-            100,
-            sw,
-            sh
-        );
-    };
-    animation.sprite.src = "../images/spritesheet.png";
+    window.requestAnimationFrame(animation.mainLoop);
 };
+
+animation.updateFrame = () => {
+    // update frame
+    currFrame = ++currFrame % frameCount;
+
+    // update source x on spritesheet
+    srcX = currFrame * width;
+
+    // clear sprite drawn before rerendering
+    animation.ctx.clearRect(x, y, width, height);
+};
+
+animation.draw = () => {
+    animation.updateFrame();
+
+    animation.ctx.drawImage(
+        animation.sprite,
+        srcX,
+        srcY,
+        width,
+        height,
+        x,
+        y,
+        width,
+        height
+    );
+};
+ */
+// canvas width and height
+const canvasWidth = 800;
+const canvasHeight = 600;
+
+// sprite width and height
+const spriteWidth = 864;
+const spriteHeight = 280;
+
+// rows and columns
+const rows = 2;
+const cols = 8;
+
+// width and height of sprite
+const width = spriteWidth / cols;
+const height = spriteHeight / rows;
+
+// current frame index and total frame count
+let curFrame = 0;
+let frameCount = 8;
+
+// starting location
+let x = 200;
+let y = 450;
+
+// sprite x and y
+let srcX;
+let srcY = 0;
+
+// canvas, its width and height
+let canvas = document.getElementById("animationArea");
+canvas.width = canvasWidth;
+canvas.height = canvasHeight;
+
+// cnavas context
+let ctx = canvas.getContext("2d");
+
+// the charatcer drawn
+let character = new Image();
+character.src = "../images/character.png";
+
+// update the frame of the sprite
+const updateFrame = () => {
+    curFrame = ++curFrame % frameCount;
+    srcX = curFrame * width;
+    ctx.clearRect(x, y, width, height);
+};
+
+// calling update and drawing the sprite
+const draw = () => {
+    updateFrame();
+    ctx.drawImage(character, srcX, srcY, width, height, x, y, width, height);
+};
+
+const drawBubble = () => {
+    ctx.beginPath();
+    ctx.arc(200, 200, 150, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.fillStyle = "azure";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(200, 380, 20, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.fillStyle = "azure";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(220, 410, 10, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.fillStyle = "azure";
+    ctx.fill();
+};
+
+// animation frame
+setInterval(draw, 100);
+
+drawBubble();

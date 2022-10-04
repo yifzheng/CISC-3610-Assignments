@@ -5,7 +5,6 @@ body {
 #animationArea {
     border: 2px solid black;
     margin-left: calc(100% - 76%);
-    margin-top: .5%;
     background-image: url("../images/landscape.jpg");
     background-size: cover;
 }
