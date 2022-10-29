@@ -1,0 +1,54 @@
+body {
+    background-color: azure;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+#canvasArea{
+    width: 100%;
+}
+
+#midi {
+    width: 600px;
+    height: 500px;
+    border: 1px solid black;
+    margin:  2% auto;
+    background-image: url(../images/ring.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.laugh, .shreik, .scream, .whisper, .possessed {
+    color: crimson;
+    font-size: 18px;
+    position: absolute;
+}
+
+.laugh {
+    bottom: 330px;
+    left: 590px
+}
+
+.shreik {
+    bottom: 300px;
+    left: 700px;
+}
+
+.possessed {
+    bottom: 300px;
+    left: 790px;
+}
+
+.scream {
+    bottom: 330px;
+    right: 580px;
+}
+
+.whisper {
+    top: 220px;
+    right: 570px;
+}

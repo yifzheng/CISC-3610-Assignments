@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Audio Lab</title>
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/index.js"></script>
+    </head>
+    <body>
+        <header id="header">CISC 3610: Audio Lab</header>
+        <section id="sound-effects">
+            <audio id="evil-laugh">
+                <source src="../audio/evil-laugh-49831.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="evil-shreik">
+                <source src="../audio/evil-shreik-45560.mp3" type="audio/mp3" />
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="ghost-whispers">
+                <source
+                    src="../audio/ghost-whispers-6030.mp3"
+                    type="audio/mp3"
+                />
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="possessed-laugh">
+                <source
+                    src="../audio/possessed-laugh-94851.mp3"
+                    type="audio/mp3"
+                />
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="scream-with-echo">
+                <source
+                    src="../audio/scream-with-echo-46585.mp3"
+                    type="audio/mp3"
+                />
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+        <main id="canvasArea">
+            <img
+                id="midi"
+                alt="midi controller"
+                src="../images/ring.jpg"
+                usemap="#midiMap"
+                width="600"
+                height="500"
+            />
+
+            <map name="midiMap">
+                <area
+                    shape="circle"
+                    coords="150, 370, 40"
+                    alt="button-1"
+                    onclick="btnOne()"
+                />
+                <area
+                    shape="circle"
+                    coords="250, 400, 40"
+                    alt="button-1"
+                    onclick="btnTwo()"
+                />
+                <area
+                    shape="circle"
+                    coords="350, 400, 40"
+                    alt="button-1"
+                    onclick="btnFour()"
+                />
+                <area
+                    shape="circle"
+                    coords="460, 370, 40"
+                    alt="button-1"
+                    onclick="btnThree()"
+                />
+                <area
+                    shape="circle"
+                    coords="460, 130, 20"
+                    alt="button-1"
+                    onclick="btnFive()"
+                />
+            </map>
+            <div class="laugh">Laugh</div>
+            <div class="shreik">Shreik</div>
+            <div class="scream">Scream</div>
+            <div class="possessed">Possessed</div>
+            <div class="whisper">Whispers</div>
+        </main>
+        <footer id="footer">
+            Back to <a href="../../index.html">main</a> page
+        </footer>
+    </body>
+</html>
