@@ -1,0 +1,48 @@
+body {
+    background-color: azure;
+    text-align: center;
+    font-size: 20px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#myCanvas {
+    width: 600px;
+    height: 600px;
+    border: 3px solid black;
+    margin: 10px auto;
+}
+
+#button-div {
+    margin: 10px 0;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    color: #020202;
+    font-size: 16px;
+}
+
+button:first-child {
+    background-color: chartreuse;
+}
+
+button:last-child {
+    background-color: brown;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+}
+
+a:active {
+    color: black;
+}
