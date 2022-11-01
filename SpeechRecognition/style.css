@@ -32,11 +32,11 @@ button {
 }
 
 button:first-child {
-    background-color: chartreuse;
+    background-color: rgb(174, 224, 123);
 }
 
 button:last-child {
-    background-color: brown;
+    background-color: rgb(218, 99, 99);
 }
 
 a {
