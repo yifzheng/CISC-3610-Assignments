@@ -83,10 +83,10 @@ speechRec.onresult = (event) => {
         .map((result) => result[0])
         .map((result) => result.transcript)[0]
         .split(" ");
-    console.log(text);
+
     // if text.length equals 2 because ["color", "A COLOR"].length = 2 and ['size", "A SIZE"].length = 2
     if (text.length === 2 && text.includes("color")) {
-        console.log(`Color: ${text[1]}`);
+        
         // check if text[1] is a number after parsing
         if (typeof parseInt(text[1]) === Number) {
             playText("Please say a valid color");
@@ -96,7 +96,7 @@ speechRec.onresult = (event) => {
             speechColor = text[1];
         }
     } else if (text.length === 2 && text.includes("size")) {
-        console.log(`Size: ${text[1]}`);
+        
         // if the size if greater than 300
         if (parseInt(text[1]) > 300) {
             playText("Size limit 300");
