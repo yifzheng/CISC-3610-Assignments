@@ -15,6 +15,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     background-color: #96b2e3;
+    box-shadow: 0px 0px 25px 10px #a3b1c8;
 }
 
 .center {
