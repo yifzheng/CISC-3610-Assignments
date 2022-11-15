@@ -1,0 +1,66 @@
+body {
+    background-color: #5c7aab;
+    font-size: 20px;
+}
+
+.nav-bar a {
+    font-size: 1rem;
+}
+
+.content-card {
+    border: 3px solid #6667ab;
+    border-radius: 10px;
+    width: min(90%, 800px);
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #96b2e3;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    float: right;
+    margin-right: 10px;
+}
+
+.content-card h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    margin: 20px auto;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.bold-sm {
+    font-weight: 500;
+}
+
+.sm {
+    font-size: 1rem;
+}
+
+.md {
+    font-size: 2rem;
+}
+
+.lg {
+    font-size: 3rem;
+}
+
+#collapseInfo p {
+    text-indent: 40px;
+    margin-top: 20px;
+}
+
+.indent {
+    text-indent: 40px;
+}
+
+.indent-2 {
+    text-indent: 80px;
+}
