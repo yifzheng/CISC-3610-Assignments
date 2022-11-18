@@ -35,7 +35,7 @@
                     id="navbarNavAltMarkup"
                 >
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active px-2" href="#profile"
+                        <a class="nav-item nav-link px-2" href="#profile"
                             >Profile</a
                         >
                         <a class="nav-item nav-link px-2" href="#education"
@@ -61,7 +61,7 @@
         <!-- Profile: Image, my name, description of who I am, contact info -->
         <main class="container-lg">
             <section id="profile" class="content-card">
-                <img src="" alt="profile image" />
+                <img src="profile.jpg" alt="profile image" id="profilePic" class="profile_img"/>
                 <h1 class="center">Yifeng Zheng</h1>
 
                 <!-- Contact Info Collapse Element -->
@@ -323,7 +323,7 @@
             <br />
             <!-- This section has content for my skills in technology and outside technology -->
             <section class="content-card" id="skills">
-                <h1 class="bold indent">Skills</h1>
+                <h1 class="bold">Skills</h1>
                 <article class="skills-list indent">
                     <p class="bold-sm">Front-End Technologies</p>
                     <p class="indent-2">
@@ -348,9 +348,61 @@
             <!-- This section has content on my extraciricualrs and my honors I received -->
             <section class="content-card" id="ex_honors">
                 <h1 class="bold">Extraciriculars & Honors</h1>
+                <article class="indent" id="collapse_1">
+                    <p class="bold">
+                        <button
+                            class="btn btn-primary"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseOne"
+                            aria-expanded="false"
+                            aria-controls="collapseOne"
+                        >
+                            Dean's List
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapseOne">
+                        <p class="sm indent-2 bold-sm">
+                            Fall 2019, Spring 2020, Fall 2020, Spring 2021, Fall
+                            2021, Spring 2022
+                        </p>
+                    </div>
+                </article>
+                <article class="indent" id="collapse_2">
+                    <p class="bold">
+                        <button
+                            class="btn btn-primary"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo"
+                        >
+                            Chess-in-the-Schools/ Tournaments
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapseTwo">
+                        <p class="sm">
+                            <ul>
+                                <li class="sm bold">
+                                    Novice U-600 1st place
+                                </li>
+                                <li class="sm bold">
+                                    Host and organizing 25+ free chess tournaments at public schools throughout NYC
+                                </li>
+                                <li class="sm bold">
+                                    2016 Super Nationals at Tennessee
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </article>
             </section>
         </main>
 
+        <footer>
+            <a href="#navbarNavAltMarkup" class="btn btn-light text-danger" id="back_to_top" type="button">Back to Top</a>
+        </footer>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script
             src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
